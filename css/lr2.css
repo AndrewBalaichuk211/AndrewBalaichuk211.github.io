@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list ol {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+    counter-reset: li;
+}
+
+.list li:before {
+    counter-increment: li;
+    content: counters(li, ".") ". ";
+}
+
+.three-lists {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.text p {
+    font-size: 20px;
+}
