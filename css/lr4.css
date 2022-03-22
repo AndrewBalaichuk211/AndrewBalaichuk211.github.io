@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.task {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px 5px 30px 5px;
+}
+
+
+/* task1 */
+
+.task1 {
+    font-family: Arial, sans-serif;
+}
+
+.task1 .myblock {
+    width: 400px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 4px;
+    margin: 30px;
+}
+
+.task1 .lemon {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    background: url(https://cdn4.iconfinder.com/data/icons/Limon_iContainer/512/Grapefruit.png);
+    background-size: contain;
+    background-position: 50%;
+    border-radius: 5px;
+    float: left;
+}
+
+.task1 .about-lemon h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.task1 .about-lemon p {
+    font-size: 12px;
+    line-height: 150%;
+    margin: 20px 0;
+}
+
+
+/* task2 */
+
+.task2 {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.task2 .wrap {
+    width: 350px;
+    margin: 40px auto;
+    border: 1px solid #c0c0c0;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.task2 h1 {
+    font-size: 20;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task2 img {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 300px;
+    box-shadow: 0 0 10px #454545;
+}
+
+.task2 p {
+    font-size: 13px;
+    line-height: 150%;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.task2 .info {
+    text-align: center;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 10px;
+}
+
+.task2 .side {
+    font-weight: 700;
+    width: 180px;
+    display: inline-block;
+}
+
+.task2 p:nth-child(even) {
+    background: #ececec;
+}
+
+
+/* task3 */
+
+.task3 p {
+    margin: 1.5em;
+    font-size: 18px;
+}
+
+.task3 p:nth-child(1)::before {
+    content: '\2660';
+}
+
+.task3 p:nth-child(2)::before {
+    content: '\2663';
+}
+
+.task3 p:nth-child(3)::before {
+    content: '\2666';
+    color: red;
+}
+
+.task3 p:nth-child(4)::before {
+    content: '\2665';
+    color: red;
+}
+
+
+/* task4 */
+
+.task4 {
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.task4 a:link,
+.task4 a:visited {
+    color: #3a681a;
+    text-decoration: none;
+}
+
+.task4 a:hover {
+    color: #5ca22e;
+}
+
+.task4 a:active {
+    color: #dc0000;
+}
+
+.task4 .pole {
+    width: 95px;
+}
+
+.task4 .pole,
+.task4 .pole2 {
+    border: 1px solid green;
+    background-color: #e7f2d7;
+    height: 17px;
+}
+
+
+/* task5 */
+
+.task5 .links {
+    background: #F6967D;
+}
+
+.task5 .links a {
+    color: #FFFDEB;
+    display: inline-block;
+    border-right: 1px solid #B62025;
+    padding: 5px 10px;
+}
+
+.task5 .links a:last-child {
+    border-right: none;
+}
+
+
+/* task6 */
+
+
+/* task7 */
