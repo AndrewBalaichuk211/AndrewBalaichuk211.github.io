@@ -178,5 +178,62 @@
 
 /* task6 */
 
+.task6 .title {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.task6 .title span {
+    background: #fff;
+    display: inline-block;
+    padding: 0 5px;
+    position: relative;
+}
+
+.task6 .title:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    /* ширина линии */
+    background: #000;
+    /* цвет линии */
+}
+
 
 /* task7 */
+
+.task7 .battery {
+    position: relative;
+    border: 4px solid;
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+    content: "";
+}
+
+.task7 .battery::after {
+    background: black;
+    position: absolute;
+    width: 6px;
+    height: 20px;
+    top: 15px;
+    left: 154px;
+    content: "";
+}
+
+.task7 .low {
+    background: linear-gradient(90deg, #ED1C24 50px, white 50px);
+}
+
+.task7 .mid {
+    background: linear-gradient(90deg, #FFC60B 100px, white 100px);
+}
+
+.task7 .max {
+    background-color: #00A055;
+}
