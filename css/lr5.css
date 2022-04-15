@@ -1,0 +1,47 @@
+.main-block {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.house {
+    width: 150px;
+    height: 150px;
+    background: coral;
+    position: absolute;
+    top: 150px;
+    left: 75px;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 100px solid red;
+    position: relative;
+    left: 40px;
+    top: -10px;
+}
+
+.chimney {
+    width: 20px;
+    height: 60px;
+    background: black;
+    position: relative;
+}
+
+.door {
+    width: 60px;
+    height: 90px;
+    background: brown;
+    position: absolute;
+}
+
+.window {
+    width: 40px;
+    height: 40px;
+    background: cyan;
+    position: absolute;
+}
