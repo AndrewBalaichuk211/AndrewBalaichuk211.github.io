@@ -122,4 +122,44 @@
 
 /* task_3 */
 
-.task_3 .fullwrap {}
+.task3 div {
+    border: 2px solid #000;
+    box-sizing: border-box
+}
+
+.task3 .fullwrap {
+    height: 100vh;
+    width: 1000px;
+    margin: 5px auto 30px;
+    padding: 10px
+}
+
+.task3 .wrap {
+    margin: 10px 0;
+    height: 52%;
+    padding: 7px
+}
+
+.task3 .header {
+    height: 15%
+}
+
+.task3 .footer {
+    height: 30%;
+    clear: both
+}
+
+.task3 .sidebar,
+.task3 .body {
+    height: 100%;
+}
+
+.task3 .sidebar {
+    width: 30%;
+    float: right
+}
+
+.task3 .body {
+    width: 67%;
+    float: left
+}
