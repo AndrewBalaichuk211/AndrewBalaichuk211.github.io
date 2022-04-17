@@ -228,6 +228,7 @@
     margin-left: auto;
     margin-right: 4px;
     margin-top: 12px;
+    margin-bottom: 1px;
     transition: all ease 0.5s;
 }
 
@@ -243,12 +244,41 @@
     transform: scale(1.05);
 }
 
-.task4 table {
-    width: 100%;
+.task4 .flocol-1 .column {
+    float: left;
+    width: 25%;
+}
+
+.flocol-2 .buttons {
+    position: relative;
+}
+
+.flocol-2 .column1 {
     position: absolute;
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 10px;
+    left: 0%;
+    width: 25%;
+    top: 200px;
+}
+
+.flocol-2 .column2 {
+    position: absolute;
+    left: 25%;
+    width: 25%;
+    top: 200px;
+}
+
+.flocol-2 .column3 {
+    position: absolute;
+    left: 50%;
+    width: 25%;
+    top: 200px;
+}
+
+.flocol-2 .column4 {
+    position: absolute;
+    left: 75%;
+    width: 25%;
+    top: 200px;
 }
 
 .task4 .properties__calculator {
@@ -260,9 +290,10 @@
     outline: none;
     border: 3px solid #3e898c;
     border-radius: 15px;
+    margin-left: 10px;
     margin-top: 10px;
-    margin-right: 18px;
-    margin-bottom: 18px;
+    margin-right: 14px;
+    margin-bottom: 14px;
     font-size: 25px;
     padding: 20px 25px;
     cursor: pointer;
