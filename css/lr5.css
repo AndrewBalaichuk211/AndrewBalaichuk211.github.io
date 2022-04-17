@@ -314,19 +314,3 @@
     clear: both;
     margin-bottom: 30px;
 }
-
-.task4 .poscol-wrap {
-    position: relative;
-    margin-bottom: 60px;
-}
-
-.task4 .poscol-1 {
-    position: relative;
-    left: -377px;
-}
-
-.task4 .poscol-2 {
-    position: absolute;
-    right: 168px;
-    top: 0;
-}
