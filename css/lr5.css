@@ -163,3 +163,108 @@
     width: 67%;
     float: left
 }
+
+
+/* task_4 */
+
+.task4 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.task4 .calculator {
+    width: 412px;
+    margin: auto;
+    border: 3px solid #3e898c;
+    text-align: right;
+    padding-top: 17px;
+    border-radius: 10px;
+    position: relative;
+    height: 625px;
+}
+
+.task4 .text__header {
+    background: #3e898c;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+}
+
+.task4 .body__calculator {
+    padding: 15px 10px;
+}
+
+.task4 .textview {
+    overflow: scroll;
+    border: none;
+    outline: none;
+    height: 55px;
+    border: 3px solid #3e898c;
+    border-radius: 5px;
+    width: 100%;
+    padding: 9px 5px;
+    color: #3e898c;
+    font-size: 25px;
+    text-align: right;
+}
+
+.task4 #clean {
+    display: block;
+    width: 130px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    background: #3e898c;
+    color: #fff;
+    padding: 4px;
+    font-size: 18px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 4px;
+    margin-top: 12px;
+    transition: all ease 0.5s;
+}
+
+.task4 #clean:hover,
+.task4 .properties__calculator:hover {
+    box-shadow: 0 0 10px #3e898c;
+}
+
+.task4 #clean:active,
+.task4 .properties__calculator:active {
+    background: #3e898c;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.task4 table {
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.task4 .properties__calculator {
+    width: 75px;
+    height: 75px;
+    background: #fff;
+    color: #3e898c;
+    border: none;
+    outline: none;
+    border: 3px solid #3e898c;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    font-size: 25px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
