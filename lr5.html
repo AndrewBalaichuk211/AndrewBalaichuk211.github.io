@@ -44,42 +44,170 @@
         </div>
     </div>
 
-    <h1>Task4</h1>
+    <h1>Task4 (Перший калькулятор робочий) </h1>
     <div class=" task4">
-        <div class="calculator">
-            <div class="header__calculator">
-                <p class="text__header">Casio 3234</p>
+        <div class="col-wrap">
+            <div class="flocol-1">
+                <div class="calculator">
+                    <div class="header__calculator">
+                        <p class="text__header">Casio 3234</p>
+                    </div>
+                    <div class="body__calculator">
+                        <form name="form">
+                            <input type="text" name="textview" class="textview" placeholder="0" disabled>
+                        </form>
+                        <button id="clean" class="clean" onclick="clean()">Очистити</button>
+                        <div class="properties">
+                            <table>
+                                <tr>
+                                    <td class="buttons">
+                                        <input type="button" name="one" value="1" class="properties__calculator" onclick="insert('1')">
+                                        <input type="button" name="two" value="2" class="properties__calculator" onclick="insert('2')">
+                                        <input type="button" name="three" value="3" class="properties__calculator" onclick="insert('3')">
+                                        <input type="button" name="add" value="+" class="properties__calculator" onclick="opt('+')">
+
+                                        <input type="button" name="four" value="4" class="properties__calculator" onclick="insert('4')">
+                                        <input type="button" name="five" value="5" class="properties__calculator" onclick="insert('5')">
+                                        <input type="button" name="six" value="6" class="properties__calculator" onclick="insert('6')">
+                                        <input type="button" name="sub" value="-" class="properties__calculator" onclick="opt('-')">
+
+                                        <input type="button" name="seven" value="7" class="properties__calculator" onclick="insert('7')">
+                                        <input type="button" name="eight" value="8" class="properties__calculator" onclick="insert('8')">
+                                        <input type="button" name="nine" value="9" class="properties__calculator" onclick="insert('9')">
+                                        <input type="button" name="mul" value="*" class="properties__calculator" onclick="opt('*')">
+
+                                        <input type="button" name="comma" value="," class="properties__calculator" onclick="insert(',')">
+                                        <input type="button" name="zero" value="0" class="properties__calculator" onclick="insert('0')">
+                                        <input type="button" name="doit" value="=" class="properties__calculator equal" onclick="equal()">
+                                        <input type="button" name="div" value="/" class="properties__calculator" onclick="opt('/')">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="body__calculator">
-                <form name="form">
-                    <input type="textview" name="textview" class="textview" id="textview" placeholder="0" disabled>
-                </form>
-                <button id="clean" onclick="clean()">Очистити</button>
-                <div class="properties">
-                    <table>
-                        <tr>
-                            <td class="buttons">
-                                <input type="button" name="one" value="1" class="properties__calculator" onclick="insert('1')">
-                                <input type="button" name="two" value="2" class="properties__calculator" onclick="insert('2')">
-                                <input type="button" name="three" value="3" class="properties__calculator" onclick="insert('3')">
-                                <input type="button" name="add" value="+" class="properties__calculator" onclick="opt('+')">
-                                <input type="button" name="four" value="4" class="properties__calculator" onclick="insert('4')">
-                                <input type="button" name="five" value="5" class="properties__calculator" onclick="insert('5')">
-                                <input type="button" name="six" value="6" class="properties__calculator" onclick="insert('6')">
-                                <input type="button" name="sub" value="-" class="properties__calculator" onclick="opt('-')">
+            <div class="flocol-2">
+                <div class="calculator">
+                    <div class="header__calculator">
+                        <p class="text__header">Casio 3234</p>
+                    </div>
+                    <div class="body__calculator">
+                        <form name="form">
+                            <input type="text" name="textview" class="textview" placeholder="0" disabled>
+                        </form>
+                        <button class="clean">Очистити</button>
+                        <div class="properties">
+                            <table>
+                                <tr>
+                                    <td class="buttons">
+                                        <input type="button" name="one" value="1" class="properties__calculator">
+                                        <input type="button" name="two" value="2" class="properties__calculator">
+                                        <input type="button" name="three" value="3" class="properties__calculator">
+                                        <input type="button" name="add" value="+" class="properties__calculator">
 
-                                <input type="button" name="seven" value="7" class="properties__calculator" onclick="insert('7')">
-                                <input type="button" name="eight" value="8" class="properties__calculator" onclick="insert('8')">
-                                <input type="button" name="nine" value="9" class="properties__calculator" onclick="insert('9')">
-                                <input type="button" name="mul" value="*" class="properties__calculator" onclick="opt('*')">
+                                        <input type="button" name="four" value="4" class="properties__calculator">
+                                        <input type="button" name="five" value="5" class="properties__calculator">
+                                        <input type="button" name="six" value="6" class="properties__calculator">
+                                        <input type="button" name="sub" value="-" class="properties__calculator">
 
-                                <input type="button" name="comma" value="," class="properties__calculator" onclick="insert(',')">
-                                <input type="button" name="zero" value="0" class="properties__calculator" onclick="insert('0')">
-                                <input type="button" name="doit" value="=" class="properties__calculator equal" onclick="equal()">
-                                <input type="button" name="div" value="/" class="properties__calculator" onclick="opt('/')">
-                            </td>
-                        </tr>
-                    </table>
+                                        <input type="button" name="seven" value="7" class="properties__calculator">
+                                        <input type="button" name="eight" value="8" class="properties__calculator">
+                                        <input type="button" name="nine" value="9" class="properties__calculator">
+                                        <input type="button" name="mul" value="*" class="properties__calculator">
+
+                                        <input type="button" name="comma" value="," class="properties__calculator">
+                                        <input type="button" name="zero" value="0" class="properties__calculator">
+                                        <input type="button" name="doit" value="=" class="properties__calculator equal">
+                                        <input type="button" name="div" value="/" class="properties__calculator">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floclear"></div>
+        </div>
+        <div class="poscol-wrap">
+            <div class="poscol-1">
+                <div class="calculator">
+                    <div class="header__calculator">
+                        <p class="text__header">Casio 3234</p>
+                    </div>
+                    <div class="body__calculator">
+                        <form name="form">
+                            <input type="text" name="textview" class="textview" placeholder="0" disabled>
+                        </form>
+                        <button class="clean">Очистити</button>
+                        <div class="properties">
+                            <table>
+                                <tr>
+                                    <td class="buttons">
+                                        <input type="button" name="one" value="1" class="properties__calculator">
+                                        <input type="button" name="two" value="2" class="properties__calculator">
+                                        <input type="button" name="three" value="3" class="properties__calculator">
+                                        <input type="button" name="add" value="+" class="properties__calculator">
+
+                                        <input type="button" name="four" value="4" class="properties__calculator">
+                                        <input type="button" name="five" value="5" class="properties__calculator">
+                                        <input type="button" name="six" value="6" class="properties__calculator">
+                                        <input type="button" name="sub" value="-" class="properties__calculator">
+
+                                        <input type="button" name="seven" value="7" class="properties__calculator">
+                                        <input type="button" name="eight" value="8" class="properties__calculator">
+                                        <input type="button" name="nine" value="9" class="properties__calculator">
+                                        <input type="button" name="mul" value="*" class="properties__calculator">
+
+                                        <input type="button" name="comma" value="," class="properties__calculator">
+                                        <input type="button" name="zero" value="0" class="properties__calculator">
+                                        <input type="button" name="doit" value="=" class="properties__calculator equal">
+                                        <input type="button" name="div" value="/" class="properties__calculator">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="poscol-2">
+                <div class="calculator">
+                    <div class="header__calculator">
+                        <p class="text__header">Casio 3234</p>
+                    </div>
+                    <div class="body__calculator">
+                        <form name="form">
+                            <input type="text" name="textview" class="textview" placeholder="0" disabled>
+                        </form>
+                        <button class="clean">Очистити</button>
+                        <div class="properties">
+                            <table>
+                                <tr>
+                                    <td class="buttons">
+                                        <input type="button" name="one" value="1" class="properties__calculator">
+                                        <input type="button" name="two" value="2" class="properties__calculator">
+                                        <input type="button" name="three" value="3" class="properties__calculator">
+                                        <input type="button" name="add" value="+" class="properties__calculator">
+
+                                        <input type="button" name="four" value="4" class="properties__calculator">
+                                        <input type="button" name="five" value="5" class="properties__calculator">
+                                        <input type="button" name="six" value="6" class="properties__calculator">
+                                        <input type="button" name="sub" value="-" class="properties__calculator">
+
+                                        <input type="button" name="seven" value="7" class="properties__calculator">
+                                        <input type="button" name="eight" value="8" class="properties__calculator">
+                                        <input type="button" name="nine" value="9" class="properties__calculator">
+                                        <input type="button" name="mul" value="*" class="properties__calculator">
+
+                                        <input type="button" name="comma" value="," class="properties__calculator">
+                                        <input type="button" name="zero" value="0" class="properties__calculator">
+                                        <input type="button" name="doit" value="=" class="properties__calculator equal">
+                                        <input type="button" name="div" value="/" class="properties__calculator">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
