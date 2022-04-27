@@ -17,6 +17,8 @@
     margin: auto;
     width: 1032px;
     height: 616px;
+    border: 0.5px solid #000;
+    margin-bottom: 50px;
 }
 
 .container__header {
