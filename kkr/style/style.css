@@ -254,7 +254,7 @@ body {
 .burger .line {
     height: 2px;
     width: 35px;
-    margin-top: 12px;
+    margin-top: 10px;
     margin-left: 90%;
     background: #daf8e3;
     transition: transform 0.75s ease, opacity 0.75s ease;
