@@ -1,0 +1,70 @@
+/* медіа запити */
+
+@media screen and (min-width: 320px) {
+    .content-choise-wrapper {
+        width: 50%;
+    }
+    .content-choise-wrapper:nth-of-type(2n+1) {
+        clear: left;
+    }
+    #header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .content-choise-wrapper {
+        width: 33.333%;
+    }
+    .content-choise-wrapper:nth-of-type(2n+1) {
+        clear: none;
+    }
+    .content-choise-wrapper:nth-of-type(3n+1) {
+        clear: left;
+    }
+    #header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content-choise-wrapper {
+        width: 25%;
+    }
+    .content-choise-wrapper:nth-of-type(3n+1) {
+        clear: none;
+    }
+    .content-choise-wrapper:nth-of-type(4n+1) {
+        clear: left;
+    }
+    #header {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .burger {
+        display: block;
+    }
+    .sitebar-links a {
+        display: flex;
+        width: 50%;
+    }
+    .sitebar-links {
+        display: flex;
+        position: fixed;
+        top: 43px;
+        right: 0px;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: #333333;
+        transform: translateX(100%);
+        transition: transform 1s ease;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .sitebar-links li:nth-child(1) {
+        border-top: 0px solid #474747;
+    }
+}

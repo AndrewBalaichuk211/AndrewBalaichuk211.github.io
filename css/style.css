@@ -193,11 +193,15 @@ img {
 }
 
 #contacts {
-    width: 175px;
+    width: 110px;
 }
 
 #resume {
-    width: 175px;
+    width: 110px;
+}
+
+#pr {
+    width: 250px;
 }
 
 #labs {
