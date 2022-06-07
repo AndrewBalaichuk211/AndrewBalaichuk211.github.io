@@ -1,44 +1,54 @@
 /* медіа запити */
 
-@media screen and (min-width: 300px) {
-    .content-choise-wrapper:nth-of-type(1n) {
-        clear: left;
+@media (min-width: 300px) and (max-width: 500px) {
+    .content-choise-wrapper {
+        width: 60%;
+        margin-left: calc(50% - 110px);
     }
-    #header {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 500px) {
     .content-choise-wrapper:nth-of-type(2n+1) {
         clear: left;
     }
-    #header {
-        display: none;
+    .burger .line {
+        margin-left: 87%;
     }
 }
 
-@media screen and (min-width: 760px) {
+@media (min-width: 500px) and (max-width: 768px) {
+    .content-choise-wrapper {
+        width: 50%;
+    }
+    .content-choise-wrapper:nth-of-type(2n+1) {
+        clear: left;
+    }
+    .burger .line {
+        margin-left: 92%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content-choise-wrapper {
+        width: 33.333%;
+    }
     .content-choise-wrapper:nth-of-type(2n+1) {
         clear: none;
     }
     .content-choise-wrapper:nth-of-type(3n+1) {
         clear: left;
     }
-    #header {
-        display: none;
+    .burger .line {
+        margin-left: 93%;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    .content-choise-wrapper {
+        width: 25%;
+    }
     .content-choise-wrapper:nth-of-type(3n+1) {
         clear: none;
     }
     .content-choise-wrapper:nth-of-type(4n+1) {
         clear: left;
-    }
-    #header {
-        display: block;
     }
 }
 
@@ -55,16 +65,23 @@
         position: fixed;
         top: 43px;
         right: 0px;
-        width: 50%;
+        width: 100%;
+        height: 100%;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
         background: #333333;
         transform: translateX(100%);
         transition: transform 1s ease;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
     }
+    .sitebar-links li {
+        height: 12%;
+        padding: 6%;
+    }
     .sitebar-links li:nth-child(1) {
         border-top: 0px solid #474747;
+    }
+    .sitebar-links li:last-child() {
+        border-bottom: 1px solid #474747;
     }
 }
