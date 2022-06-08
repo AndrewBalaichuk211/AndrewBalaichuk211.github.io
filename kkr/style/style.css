@@ -5,11 +5,6 @@
     margin: 0;
 }
 
-#footer,
-#copyright {
-    display: none;
-}
-
 body {
     background-color: #333333;
 }
@@ -533,7 +528,7 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    left: 190px;
+    left: 75%;
     top: -29px;
     border: 15px solid;
     border-color: transparent transparent #1e1e1e #1e1e1e;
