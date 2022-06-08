@@ -5,7 +5,6 @@
     margin: 0;
 }
 
-#header,
 #footer,
 #copyright {
     display: none;
@@ -40,32 +39,6 @@ body {
 
 .show {
     display: block;
-}
-
-.write-a-comment textarea {
-    resize: none;
-    border: none;
-    width: 400px;
-    background-color: #111;
-    color: #5d5d5d;
-    font-family: Verdana, sans-serif;
-    font-size: 14px;
-}
-
-.write-a-comment input {
-    width: 200px;
-    height: 40px;
-    position: relative;
-    bottom: 5px;
-    border: none;
-    float: left;
-    cursor: pointer;
-}
-
-.write-a-comment input:hover {
-    background-color: #000;
-    color: #5d5d5d;
-    ;
 }
 
 #header {
