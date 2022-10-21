@@ -266,7 +266,7 @@ const sumSalaries = (salaries) => {
     if (arrSalaries.length == 0) {
         return 0;
     }
-    let ssum = 0;
+    let sum = 0;
     for (key of arrSalaries) {
         sum += key;
     }
