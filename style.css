@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0efef;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a.text:active,
+a.text:hover,
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 800;
+    display: inline;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 6px 0 6px 0;
+}
+
+span {
+    margin: 10px 0 6px 0;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    float: right;
+}
+
+.box {
+    background: #ffffff;
+    width: 960px;
+    padding: 36px;
+    margin: 86px auto 19px auto;
+    border-radius: 8px;
+}
+
+.grey {
+    background: rgb(133, 133, 133);
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 20px 20px 0 0;
+}
+
+.text {
+    background: rgb(230, 230, 230);
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 15px;
+    padding: 8px;
+    text-align: justify;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-radius: 20px;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgb(230, 230, 230);
+}
+
+.name {
+    margin-left: 20px;
+    font-size: 56px;
+    margin: auto 0 auto 0;
+    text-align: end;
+}
+
+.icon {
+    margin: 0 6px 0 6px;
+    color: rgb(190, 190, 190);
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.name-spec {
+    margin-left: 6px;
+    font-size: 18px;
+}
+
+.skil-list {
+    list-style-type: disc;
+    padding: 0;
+    padding-inline-start: 20px;
+}
+
+.contacts-icon {
+    font-size: 18px;
+    margin: 0 8px 0 6px;
+}
+
+.contacts-list {
+    margin-top: 6px;
+    list-style-type: none;
+    display: block;
+}
+
+.contacts__text {
+    height: 58px;
+    padding: auto;
+}
+
+.contacts-list__row {
+    float: left;
+    display: block;
+    min-width: 250px;
+    margin: 0 20px 0 0;
+    background: rgb(230, 230, 230);
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 20px 20px 20px 20px;
+    padding: 4px;
+    text-align: left;
+}
+
+#footer {
+    background: rgb(133, 133, 133);
+    border: 1px solid rgb(133, 133, 133);
+    color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    padding: 4px;
+    margin-bottom: -26px;
+    text-align: center;
+}
+
+
+/* меню */
+
+.menu {
+    padding: 4px;
+    width: 960px;
+    height: auto;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 0 0 6px 6px;
+    margin: -19px -36px 0px -36px;
+    background-color: #000000;
+    position: fixed;
+    top: 19px;
+    opacity: 95%;
+}
+
+.noref {
+    pointer-events: none;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    display: block;
+}
+
+.menu ul li {
+    position: relative;
+    margin: 0 20px 0 0;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menu ul li a {
+    padding: 20px;
+    display: inline-block;
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+}
+
+#contacts {
+    width: 110px;
+}
+
+#resume {
+    width: 110px;
+}
+
+#pr {
+    width: 250px;
+}
+
+#labs {
+    width: 280px;
+}
+
+.menu ul li a:hover {
+    opacity: 0.5;
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    background: #000000;
+    float: left;
+    border-radius: 6px;
+}
+
+.menu ul li ul li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
