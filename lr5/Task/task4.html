@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Завдання 4</title>
+</head>
+
+<body>
+
+    <p>Перевірте консоль</p>
+    <script>
+
+        function deleteAllComents(str) {
+            console.log("Перед видаленням " + str);
+            let regex = new RegExp("<!--(.*?)-->", "g");
+            if (regex.test(str))
+                str = str.replace(regex, "");
+            console.log("Після видалення " + str);
+        }
+        let str = '<!-- основна частина сторінки --> <div class="content">...</div><!-- основна частина сторінки --> <div class="content">...</div>"';
+        deleteAllComents(str);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Завдання 5</title>
+</head>
+
+<body>
+
+    <p>Перевірте консоль</p>
+    <script>
+        function DeleteAllTags(variable) {
+            console.log("Запис: " + variable + " Кількість символів:" + variable.length);
+            let regex = new RegExp("<p>|<br>|<font>|<hr>", "g");
+            if (regex.test(variable))
+                variable = variable.replace(regex, "");
+            console.log("Зміни: " + variable + " Кількість символів:" + variable.length);
+        }
+        let variable = "<p>Lorem ipsum dolor sit amet.<hr> <p>Lorem</p> ipsum dolor sit<br> amet consectetur adipisicing elit. Explicabo, beatae?</p>";
+        DeleteAllTags(variable);
+
+    </script>
+</body>
+
+</html>

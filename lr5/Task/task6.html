@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Завдання 6</title>
+</head>
+
+<body>
+    <p>Перевірте консоль</p>
+    <script>
+
+        function deleteSpace(str) {
+            console.log("Текст з пробілами" + str + " Кількість символів з пробілами:" + str.length);
+            let regex = new RegExp("^ +| +$", "g");
+            if (regex.test(str))
+                str = str.replace(/\s+/g, '');
+            console.log(" Текст без пробілів " + str + " Кількість символів без пробілів:" + str.length);
+        }
+        let str = " lo re m  imo wfwe  ";
+        deleteSpace(str);
+
+    </script>
+</body>
+
+</html>
