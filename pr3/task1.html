@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+
+    <style>
+        .wrapper__item {
+            max-width: 300px;
+            padding: 5px 10px;
+            background-color: #edf5e0;
+            color: black;
+            border-top: #d0e1b3 1px solid;
+            border-bottom: #d0e1b3 1px solid;
+            position: relative;
+        }
+
+        .button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__item">
+            <h2>Android</h2>
+            <p>Android (укр. Андроїд) — операційна система і платформа для мобільних телефонів та планшетних
+                комп'ютерів, створена компанією Google на базі ядра Linux.
+                альянсом Open HandSet Allience (OHA).
+            </p>
+            <div class="button">[X]</div>
+        </div>
+        <div class="wrapper__item">
+            <h2>Mac OS</h2>
+            <p>MacOS (раніше Mac OS), від Macintosh Operating System (Мак ОС, Операційна Система Макінтош), є першою
+                комерційною графічною операційною системою, створеною компанією Apple Computer. Перша версія Mac OS
+                вийшла у 1984 році разом з першим комп'ютером Macintosh.</p>
+            <div class="button">[X]</div>
+        </div>
+        <div class="wrapper__item">
+            <h2>Windows Phone</h2>
+            <p>Windows Phone (кодова назва «Photon») — велике оновлення Windows Mobile, що вийшло 11 жовтня 2010 року.
+
+                Дана система є повністю новою, з повністю новим інтерфейсом і — вперше — з інтеграцією сервісів
+                Microsoft Xbox Live і Zune. Презентація системи відбулася в рамках заходу Mobile World Congress, що
+                проходить у Барселоні.</p>
+            <div class="button">[X]</div>
+        </div>
+    </div>
+    <script>
+        let buttonHide = document.querySelectorAll(".wrapper__item");
+        let container = document.querySelector(".wrapper");
+        container.addEventListener("click", (e) => {
+            let clickedElement = e.target;
+            if (clickedElement.classList.contains("button")) {
+                clickedElement.parentElement.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

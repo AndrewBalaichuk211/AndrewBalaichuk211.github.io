@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            position: relative;
+            width: 268px;
+            padding: 10px 40px;
+        }
+
+        .container img {
+            width: 130px;
+            height: 130px;
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 60px;
+            padding: 0;
+            background: #ddd;
+            border-radius: 15px;
+            border: 1px solid gray;
+            font-size: 24px;
+            line-height: 24px;
+            color: #444;
+            display: block;
+        }
+
+        .arrow:focus {
+            outline: none;
+        }
+
+        .arrow:hover {
+            background: #ccc;
+            cursor: pointer;
+        }
+
+        .prev_arrow {
+            left: 7px;
+        }
+
+        .next_arrow {
+            right: 7px;
+        }
+
+        .photos {
+            width: 260px;
+            overflow: hidden;
+        }
+
+        .photos ul {
+            height: 130px;
+            width: 9999px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            transition: margin-left 250ms;
+            font-size: 0;
+        }
+
+        .photos li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <button class="arrow prev_arrow">⇦</button>
+        <div class="photos">
+            <ul>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/camera_1f4f7.png">
+                </li>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/350/camera_1f4f7.png">
+                </li>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/349/camera_1f4f7.png">
+                </li>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/319/camera_1f4f7.png">
+                </li>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/326/camera_1f4f7.png">
+                </li>
+                <li><img
+                        src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/camera_1f4f7.png">
+                </li>
+
+            </ul>
+        </div>
+        <button class="arrow next_arrow">⇨</button>
+    </div>
+
+    <script>
+        let width = 130;
+        let count = 2;
+        let list = container.querySelector('ul');
+        let listElems = container.querySelectorAll('li');
+        let position = 0;
+        container.querySelector('.prev_arrow').onclick = function () {
+            position += width * count;
+            position = Math.min(position, 0)
+            list.style.marginLeft = position + 'px';
+        };
+        container.querySelector('.next_arrow').onclick = function () {
+            position -= width * count;
+            position = Math.max(position, -width * (listElems.length - count));
+            list.style.marginLeft = position + 'px';
+        };
+    </script>
+</body>
+
+</html>
