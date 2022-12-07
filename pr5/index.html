@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота 5</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="app-title">To <fisrtLetter>Do List </br>
+                <i class="fas fa-clipboard-list"></i>
+        </h1>
+
+        <ul class="todo-list js-todo-list"></ul>
+
+        <!-- empty state -->
+        <div class="empty-state">
+
+            <h2 class="empty-state__title">Add your fisrt todo</h2>
+            <p class="empty-state__description">What are you going to do today?</p>
+        </div>
+
+        <!-- to input data, we need a form an input(text holder) -->
+        <form class="js-form">
+            <input autofocuse type="text" placeholder="Write a task you gotta do" class="js-todo-input">
+
+            <input type="submit" value="Add" class="btn btn-outline-dark">
+
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
