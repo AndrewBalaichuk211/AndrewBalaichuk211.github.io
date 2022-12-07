@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Andrian Balaichuk">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styleBlog.css" media="screen">
+    <title>Technical University in Košice</title>
+
+</head>
+
+<body>
+    <!--основний блок який містить в собі меню js-->
+    <header>
+        <h1>Technical University in Košice</h1>
+        <div class="menu">
+            <button id="menuTitle">Menu</button>
+
+            <nav id="menuIts" class="menu mnHide">
+                <a href="#TUKE">TUKE</a>
+                <a href="#articles">Last Articles</a>
+                <a href="#main/1">Articles by page</a>
+                <a href="#opinions">Visitor opinions</a>
+                <a href="#addOpinion">Add your opinion</a>
+            </nav>
+        </div>
+
+    </header>
+    <main id="router-view">
+    </main>
+    <footer>
+        Andrian Balaichuk <br>
+        (c) 2022-23
+    </footer>
+
+    <!--Templates for html, dynamically inserted by the router -->
+
+    <!--сторінка Туке-->
+    <script id="template-TUKE" type="text/template">
+        <article>
+            <h2>TUKE</h2>
+            <p>
+                Technická univerzita v Košiciach (TUKE) je medzinárodne uznávanou výskumnou a vzdelávacou inšti-túciou, ktorá
+                poskytuje vzdelávanie a smart riešenia pre rôzne oblasti života. Ponúka široké spektrum atraktívnych študijných
+                programov technického, ekonomického a umeleckého zamerania. Podporu mladých inovátorov zastrešuje Univerzitný
+                vedecký park TECHNICOM. Poskytuje tiež zázemie pre viac ako 25 druhov športov. Na akademickej pôde pôsobí
+                spevácky zbor, folklórne súbory, ale aj Symfonický orchester TUKE. Študenti sa môžu stať členmi spolkov,
+                študentskej televízie a rádia. V akademickom roku 2020/2021 poskytneme študentom štipendiá vo výške 1 500
+                000,-EUR. Patria medzi nich motivačné štipendiá, odborové štipendiá, prospechové štipendiá a sociálne štipendiá.
+                Samozrejmosťou sú však tiež štipendiá od zmluvných partnerov TUKE a granty ERASMUS na štúdium v zahraničí.
+            </p>
+        </article>
+        <article>
+            <h2>TUKE photo</h2>
+             <img src="https://ssjh.sk/dokuwiki/lib/exe/fetch.php/spravy/domace/tuke.jpg.webp" alt="">
+        </article>
+        <article>
+            <h2>TUKE fakulty</h2>
+            <table valign="bottom">
+                <thead>
+                    <tr>
+                        <th>Fakulta</th>
+                        <th>Programy</th>
+                        <th>Špeciality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fakulta elektrotechniky a informatiky</td>
+                        <td>
+                            <ol>
+                                <li>Aplikovaná elektrotechnika</li>
+                                <li>Automobilová elektronika</li>
+                                <li>Elektroenergetika</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Informatika</li>
+                                <li>Inteligentné systémy</li>
+                                <li>Kyberbezpečnosť</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ekonomická fakulta</td>
+                        <td>
+                            <ol>
+                                <li>Economics and Management</li>
+                                <li>Ekonomika a manažment</li>
+                                <li>Finance</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Architektúra a urbanizmus</li>
+                                <li>Dizajn</li>
+                                <li>Voľné výtvarné umenie</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </script>
+
+    <!--сторінка де відображаються останні статті-->
+    <script id="template-articles" type="text/template">
+        {{#articles}}
+        <article>
+            <h2>{{title}}</h2>
+            <img src="{{imageLink}}" alt="" id="ImgLink" onError="removeElement(this);">
+            <p>{{body}}</p>
+            <p><strong> by {{author}}</strong> , {{dateCreated}} </p>
+        </article>
+        {{/articles}}
+        <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+    </script>
+
+    <!--сторінка де відображаються всі статті можна перегляди по сторінках-->
+    <script id="template-main" type="text/template">
+        <div class = "article-page">
+            <h2>Displaying page {{currPage}} of {{pageCount}} pages.</h2>
+            <nav>
+                {{#prevPage}}
+                <a href="#main/{{prevPage}}" id = "previous"><< Previous page</a>
+                {{/prevPage}}
+                {{#nextPage}}
+                <a href="#main/{{nextPage}}" id = "next">Next page >></a>
+                {{/nextPage}}
+            </nav>
+        </div>
+        <div id = "articles-list"></div>
+    </script>
+
+    <!--відобразиться якщо буде помилка з статтями-->
+    <script id="template-articles-error" type="text/template">
+        <article>
+            <h2>Articles acquisition failed</h2>
+            <p>
+                {{errMessage}}
+            </p>
+        </article>
+        <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+    </script>
+
+    <!--сторінка де відображаються коментарі оставленні через форму-->
+    <script id="template-opinions" type="text/template">
+        <article  id="artOpinions">
+            <h2>Visitor Opinions</h2>
+            {{#.}}
+            <section>
+                <h3><strong>{{name}}</strong>, {{gender}}, <i>{{created}}</i> <br/>{{email}}</h3>
+                <p>{{comment}}. {{willReturn}}</p>
+                <img src="{{PIC}}" alt="" onError="removeElement(this);">
+            </section>
+            {{/.}}
+            {{^.}}
+            <section>
+                Sorry, no opinions found.
+            </section>
+            {{/.}}
+            <footer  class="menuLink"><a href="#menuTitle">Back to the menu</a></footer>
+        </article>
+    </script>
+
+    <!--сторінка де відображаються форма опитування-->
+    <script id="template-addOpinion" type="text/template">
+        <article  id="artOpnFrm">
+            <h2>Your Opinion</h2>
+            <p>
+                Please, use the form below to state your opinion about this page.
+            </p>
+            <form id="opnFrm">
+                <ul>
+                <li>
+                    <label>First name:</label><input name="firstName" id="feedback-firstname" required placeholder="Your name" />
+                </li>
+                <li>
+                    <label>Email:</label><input type="email" name="email" id="feedback-email" required placeholder="Your email"/>
+                </li>
+                <li>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" id="feedback-male" value="male" /> Male
+                    <input type="radio" name="gender" id="feedback-female" value="female" /> Female
+                </li>
+                <li>
+                    <label>Message:</label>
+                    <textarea name="msg" cols="30" rows="3" id="feedback-msg" required placeholder="Your mind"></textarea>
+                </li>
+                <li>
+                    <label>Select a photo:</label><input type="url" name="url" id="feedback-photo" placeholder="enter url-photo">
+                </li>
+                <li>
+                <input type="checkbox" name="conditions" value="agree" id="feedback-conditions" required>
+                <label id="checkBoxLabel" >I agree with terms and conditions</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="willReturnElm" id="feedback-willReturnElm" required>
+                    <label id="checkBoxLabel">I will definitely return to this page.</label>
+                </li>
+                <li>
+                    <button type="submit" id="submitbtn">Submit</button>
+                    <button type="reset" id="resetbtn">Reset</button>
+                </li>
+                </ul>
+            </form>
+
+        </article>
+    </script>
+
+    <!--JavaScript code, inserted as a module-->
+    <script type="module" src="js/index.js"></script>
+    <!--<script src="js/mustache.min.js"></script>-->
+
+    <!-- для видалення фото коли його не додали в форму-->
+    <script>
+        // функція яка видаляє елемент html
+        function removeElement(element) {
+            element.remove();
+        }
+    </script>
+
+</body>
+
+</html>
