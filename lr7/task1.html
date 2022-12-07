@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+    <style>
+        .inp {
+            height: 25px;
+        }
+
+        span {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inp">
+        <span> Температура по Фаренгейту </span>
+        <input type="text" id="far" onkeyup="fartocel()">
+    </div>
+    <div class="inp">
+        <span> Температура по Цельсию </span>
+        <input type="text" id="cel" onkeyup="celtofar()">
+    </div>
+
+    <script>
+        function fartocel() {
+            var c = document.getElementById('cel');
+            var f = document.getElementById('far');
+            c.value = 5 / 9 * (f.value - 32);
+        }
+        function celtofar() {
+            var c = document.getElementById('cel');
+            var f = document.getElementById('far');
+            f.value = 9 / 5 * c.value + 32;
+        }
+    </script>
+</body>
+
+</html>
